@@ -9,7 +9,7 @@
     width: 100vw;
     height: 100vh;
     background: linear-gradient(to right, #f7f7f7, #f16cef);
-    overflow: hidden;
+    overflow: auto;
     position: relative;
 }
 
@@ -72,14 +72,91 @@ nav {
     margin: 0 auto; 
 }
 
+.profile {
+    display: flex;
+    margin-top: 50px;
+}
+
+.contena {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: 0 auto; 
+    align-items: center;
+}
+
+.contena img {
+    width: 600px;
+    height: auto;
+    margin-left: 100px;
+}
+
+.info {
+    width: auto;
+    height: auto;
+    margin: 20px;
+}
+
+.contact {
+    width: 100%;
+    height: auto;
+}
+
+.inner {
+    padding-left: 100px;
+    width: 800px;
+    height: auto;
+    margin: 0 auto;
+    
+}
+
+
+
 .sakuhin {
     display: flex;
     gap: 20px;
-    justify-content: center; /* 中央揃え */
+    justify-content: left; /* 中央揃え */
+    margin-left: 150px;
 }
 
 .sakuhin img{
     width: 500px;
     height: auto;
-    margin: 0 20px;
+    margin: 10px 20px;
+}
+
+
+
+form {
+    display: flex; /* フォーム内でもFlexboxを使用 */
+    flex-direction: column; /* 縦方向に並べる */
+}
+
+label {
+    margin-bottom: 5px; /* 下部のマージンを設定 */
+    font-weight: bold; /* フォントを太字に */
+}
+
+input,
+textarea {
+    margin-bottom: 15px; /* 下部のマージンを設定 */
+    padding: 10px; /* 内側のパディングを設定 */
+    border: 1px solid #ccc; /* ボーダーを追加 */
+    border-radius: 4px; /* 角を丸める */
+    width: 100%; /* 幅を100%に設定 */
+    box-sizing: border-box; /* ボックスサイズを含める */
+}
+
+button {
+    padding: 10px; /* 内側のパディングを設定 */
+    background-color: #4CAF50; /* ボタンの背景色 */
+    color: white; /* ボタンのテキスト色 */
+    border: none; /* ボーダーをなしに */
+    border-radius: 4px; /* 角を丸める */
+    cursor: pointer; /* カーソルをポインターに */
+    font-size: 16px; /* フォントサイズを設定 */
+}
+
+button:hover {
+    background-color: #45a049; /* ホバー時の背景色 */
 }

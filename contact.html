@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>marieの写真展</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="main">
+            <header class="header-container"></header>
+            <!-- information section -->
+            <div class="contact">
+                <div class="inner">
+                    <form id="contact-form"  method="post">
+                        <input type="hidden" name="contact_number" />
+                        <label for="last-name">姓</label>
+                        <input class="last" type="text" id="last-name" name="last-name"
+                            placeholder="例：田中">
+                        <br>
+                        <input class="first" type="text" name="first-name" placeholder="名">
+                        <br>
+                        <input class="mail" type="email" name="email" placeholder="メールアドレス">
+                        <br>
+                        <textarea class="text" name="inquiry" placeholder="ご依頼内容等" cols="30"
+                            rows="5"></textarea>
+
+                        <button>送信</button>
+
+                    </form>
+                </div>
+            </div>
+
+            <!-- control section -->
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+            <script src="./app.js"></script>
+        </body>
+
+    </html>
