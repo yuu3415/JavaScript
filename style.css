@@ -8,7 +8,7 @@
     font-size: 1.2rem;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to right, #5c0572, #e70707);
+    background: linear-gradient(to right, #f7f7f7, #f16cef);
     overflow: hidden;
     position: relative;
 }
@@ -67,107 +67,19 @@ nav {
 }
 
 .information {
-    width: 1000px;
-    height: 1000px;
-    position: absolute;
-    top: 50%;
-    left: -10%;
-    transform: translateY(-50%);
+    width: 100%;
+    height: auto;
+    margin: 0 auto; 
 }
 
-#circle {
-    width: 1000px;
-    height: 1000px;
-    /* background: #ccc; */
-    position: absolute;
-    border-radius: 50%;
-    top: 0;
-    left: 0;
-    transform: rotate(0deg);
-    transition: 1s;
-}
-
-.feature {
+.sakuhin {
     display: flex;
-    position: absolute;
-    color: white;
+    gap: 20px;
+    justify-content: center; /* 中央揃え */
 }
 
-.feature img {
-    width: 70px;
-}
-
-.feature div {
-    margin-left: 20px;
-}
-
-.feature a {
-    margin-top: 8px;
-}
-
-.one {
-    top: 450px;
-    right: 70px;
-}
-
-.two {
-    top: 100px;
-    left: 340px;
-    transform: rotate(-90deg);
-}
-
-.three {
-    bottom: 450px;
-    left: 50px;
-    transform: rotate(-180deg);
-}
-
-.four {
-    bottom: 150px;
-    right: 370px;
-    transform: rotate(-270deg);
-}
-
-.pc {
-    width: 400px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 27%;
-    z-index: 1;
-}
-
-.control {
-    position: absolute;
-    top: 50%;
-    right: 15%;
-    transform: translateY(-50%);
-    text-align: center;
-}
-
-.control img {
-    width: 15%;
-}
-
-.control h3 {
-    color: #fff;
-    margin: 20px 0;
-}
-
-#upBtn {
-    cursor: pointer;
-}
-
-#downBtn {
-    cursor: pointer;
-    transform: rotate(-180deg);
-}
-
-.overlay {
-    width: 0;
-    height: 0;
-    border-top: 520px solid #fff;
-    border-right: 520px solid transparent;
-    border-bottom: 520px solid #fff;
-    border-left: 520px solid #fff;
+.sakuhin img{
+    width: 500px;
+    height: auto;
+    margin: 0 20px;
 }
