@@ -39,3 +39,29 @@ window.onload = function() {
             });
     });
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('.image-link');
+    const overlay = document.getElementById('overlay');
+    const overlayImage = document.getElementById('overlay-image');
+    const closeBtn = document.getElementById('close');
+
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault(); // デフォルトの動作を無効
+            const img = e.target.tagName === 'IMG' ? e.target : e.target.querySelector('img');
+            if (img) {
+                overlayImage.src = img.src; // 画像をオーバーレイに表示
+                overlay.style.display = 'flex'; // オーバーレイを表示
+            }
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        overlay.style.display = 'none'; // オーバーレイを非表示
+    });
+
+    overlay.addEventListener('click', () => {
+        overlay.style.display = 'none'; // オーバーレイを非表示
+    });
+});
