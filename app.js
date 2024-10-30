@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 <h2>marie photo exhibition</h2>
             </div>
             <div class="nav-links">
-                <ul>
+            <div class="hamburger" id="hamburger">&#9776;</div> <!-- ハンバーガーアイコン -->
+                <ul id="menu">
                     <li><a href="index.html">Profile</a></li>
                     <li><a href="https://www.instagram.com/marie_no_daibouken/profilecard/?igsh=aThlNmpqemYxanU3">Instagram</a></li>
                     <li><a href="work.html">Work</a></li>
@@ -74,5 +75,27 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.addEventListener('click', () => {
             overlay.style.display = 'none'; // オーバーレイを非表示
         });
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    if (hamburger) {
+        hamburger.addEventListener('click', function () {
+            const menu = document.getElementById('menu');
+            if (menu) {
+                menu.classList.toggle('show'); // メニューの表示・非表示を切り替え
+            }
+        });
+    }
+
+    if (hamburger) {
+        document.addEventListener('click', function (event) {
+            if (!hamburger.contains(event.target) && !menu.contains(event.target)) {
+                menu.classList.remove('show'); // メニューを非表示
+
+            }
+        })
     }
 });

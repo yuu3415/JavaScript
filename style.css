@@ -1,247 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+.main {
+    font-size: 1.2rem;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #f7f7f7, #f16cef);
+    overflow: auto;
+    position: relative;
+}
 
-    .main {
-        font-size: 1.2rem;
-        width: 100vw;
-        height: 100vh;
-        background: linear-gradient(to right, #f7f7f7, #f16cef);
-        overflow: auto;
-        position: relative;
-    }
+nav {
+    display: flex;
+    width: 80%;
+    margin: 20px auto;
+    align-items: center;
+    font-weight: 550;
+    position: sticky;
+    z-index: 1;
+}
 
-    nav {
-        display: flex;
-        width: 80%;
-        margin: 20px auto;
-        align-items: center;
-        font-weight: 550;
-        position: sticky;
-        z-index: 1;
-    }
+.nav-links {
+    display: flex;
+    /* フレックスボックスにする */
+    justify-content: flex-end;
+    /* 子要素を右寄せにする */
+    flex: 1;
+    text-align: right;
+    /* テキストを右寄せにするが、flexで機能する */
+}
 
-    .nav-links {
-        flex: 1;
-        text-align: right;
-    }
+.hamburger {
+    display: none;
+    /* 初期状態では非表示 */
+    cursor: pointer;
+    font-size: 24px;
+    /* アイコンのサイズ調整 */
+}
 
-    .nav-links li {
-        list-style: none;
-    }
-
-    .log-area {
-        display: flex;
-        align-items: center;
-    }
-
-    .logo {
-        width: 50px;
-        height: 20%;
-        margin-right: 12px;
-        font-size: 14px;
-    }
-
-    .nav-links ul li {
-        display: inline-block;
-        padding: 0 2rem;
-    }
-
-    .nav-links ul a {
-        font-weight: 600;
-        color: #fff;
-        text-decoration: none;
-        transition: 0.3s;
-    }
-
-    .nav-links ul a:hover {
-        color: #dfbe2e
-    }
-
-    .main {
-        font-family: "Ubuntu", sans-serif;
-        font-weight: 300;
-        font-style: italic;
-    }
-
-    .information {
-        width: 100%;
-        height: auto;
-        margin: 0 auto;
-    }
-
-    .profile {
-        display: flex;
-        margin-top: 50px;
-    }
-
-    .contena {
-        display: flex;
-        width: 100%;
-        height: auto;
-        margin: 0 auto;
-        align-items: center;
-    }
-
-    .contena img {
-        width: 600px;
-        height: auto;
-        margin-left: 100px;
-    }
-
-    .info {
-        width: auto;
-        height: auto;
-        margin: 20px;
-    }
-
-    .contact {
-        width: 100%;
-        height: auto;
-    }
-
-    .inner {
-        padding-left: 100px;
-        width: 800px;
-        height: auto;
-        margin: 0 auto;
-        font-size: 1.2rem;
-
-    }
-
-    label {
-        font-size: 1.2rem;
-        /* ラベルのフォントサイズを上げる */
-    }
-
-    input,
-    textarea {
-        font-size: 1.2rem;
-        /* 入力フィールドとテキストエリアのフォントサイズを上げる */
-        padding: 10px;
-        /* パディングを設定して、見た目を改善 */
-    }
-
-    button {
-        font-size: 1.2rem;
-        /* ボタンのフォントサイズを上げる */
-        padding: 10px 20px;
-        /* ボタンのパディングを調整 */
-    }
+#menu {
+    display: flex;
+    /* デフォルトではフレックスで表示 */
+}
 
 
+.nav-links li {
+    list-style: none;
+}
 
-    .sakuhin {
-        display: flex;
-        gap: 20px;
-        justify-content: left;
-        /* 中央揃え */
-        margin-left: 150px;
-    }
+.log-area {
+    display: flex;
+    align-items: center;
+}
 
+.logo {
+    width: 50px;
+    height: 20%;
+    margin-right: 12px;
+    font-size: 14px;
+}
 
-    .image-link img {
-        width: 500px;
-        /* 必要に応じてサイズ調整 */
-        cursor: pointer;
-        transition: transform 0.2s;
-        /* ホバー効果用 */
-        margin-top: 20px;
-    }
+.nav-links ul li {
+    display: inline-block;
+    padding: 0 2rem;
+}
 
-    .image-link:hover img {
-        transform: scale(1.05);
-        /* ホバー時に画像を少し拡大 */
-    }
+.nav-links ul a {
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
 
-    .overlay {
-        display: none;
-        /* 初期状態は非表示 */
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-    }
+.nav-links ul a:hover {
+    color: #dfbe2e
+}
 
-    .overlay img {
-        max-width: 90%;
-        max-height: 90%;
-    }
+.main {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
 
-    #close {
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        color: white;
-        font-size: 30px;
-        cursor: pointer;
-    }
+.information {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.profile {
+    display: flex;
+    margin-top: 50px;
+}
+
+.contena {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.contena img {
+    width: 600px;
+    height: auto;
+    margin-left: 100px;
+}
+
+.info {
+    width: auto;
+    height: auto;
+    margin: 20px;
+}
+
+.contact {
+    width: 100%;
+    height: auto;
+}
+
+.inner {
+    padding-left: 100px;
+    width: 800px;
+    height: auto;
+    margin: 0 auto;
+    font-size: 1.2rem;
+
+}
+
+label {
+    font-size: 1.2rem;
+    /* ラベルのフォントサイズを上げる */
+}
+
+input,
+textarea {
+    font-size: 1.2rem;
+    /* 入力フィールドとテキストエリアのフォントサイズを上げる */
+    padding: 10px;
+    /* パディングを設定して、見た目を改善 */
+}
+
+button {
+    font-size: 1.2rem;
+    /* ボタンのフォントサイズを上げる */
+    padding: 10px 20px;
+    /* ボタンのパディングを調整 */
+}
 
 
 
-    form {
-        display: flex;
-        /* フォーム内でもFlexboxを使用 */
-        flex-direction: column;
-        /* 縦方向に並べる */
-    }
+.sakuhin {
+    display: flex;
+    gap: 20px;
+    justify-content: left;
+    /* 中央揃え */
+    margin-left: 150px;
+}
 
-    label {
-        margin-bottom: 5px;
-        /* 下部のマージンを設定 */
-        font-weight: bold;
-        /* フォントを太字に */
-    }
 
-    textarea {
-        margin-bottom: 15px;
-        /* 下部のマージンを設定 */
-        padding: 10px;
-        /* 内側のパディングを設定 */
-        border: 1px solid #ccc;
-        /* ボーダーを追加 */
-        border-radius: 4px;
-        /* 角を丸める */
-        width: 100%;
-        /* 幅を100%に設定 */
-        box-sizing: border-box;
-        /* ボックスサイズを含める */
-    }
+.image-link img {
+    width: 500px;
+    /* 必要に応じてサイズ調整 */
+    cursor: pointer;
+    transition: transform 0.2s;
+    /* ホバー効果用 */
+    margin-top: 20px;
+}
 
-    button {
-        padding: 10px;
-        /* 内側のパディングを設定 */
-        background-color: #4CAF50;
-        /* ボタンの背景色 */
-        color: white;
-        /* ボタンのテキスト色 */
-        border: none;
-        /* ボーダーをなしに */
-        border-radius: 4px;
-        /* 角を丸める */
-        cursor: pointer;
-        /* カーソルをポインターに */
-        font-size: 16px;
-        /* フォントサイズを設定 */
-    }
+.image-link:hover img {
+    transform: scale(1.05);
+    /* ホバー時に画像を少し拡大 */
+}
 
-    input::placeholder,
-    textarea::placeholder {
-        color: #999; /* 色を指定（任意） */
-    }
+.overlay {
+    display: none;
+    /* 初期状態は非表示 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
 
-    button:hover {
-        background-color: #45a049;
-        /* ホバー時の背景色 */
-    }
+.overlay img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
+form {
+    display: flex;
+    /* フォーム内でもFlexboxを使用 */
+    flex-direction: column;
+    /* 縦方向に並べる */
+}
+
+label {
+    margin-bottom: 5px;
+    /* 下部のマージンを設定 */
+    font-weight: bold;
+    /* フォントを太字に */
+}
+
+textarea {
+    margin-bottom: 15px;
+    /* 下部のマージンを設定 */
+    padding: 10px;
+    /* 内側のパディングを設定 */
+    border: 1px solid #ccc;
+    /* ボーダーを追加 */
+    border-radius: 4px;
+    /* 角を丸める */
+    width: 100%;
+    /* 幅を100%に設定 */
+    box-sizing: border-box;
+    /* ボックスサイズを含める */
+}
+
+button {
+    padding: 10px;
+    /* 内側のパディングを設定 */
+    background-color: #4CAF50;
+    /* ボタンの背景色 */
+    color: white;
+    /* ボタンのテキスト色 */
+    border: none;
+    /* ボーダーをなしに */
+    border-radius: 4px;
+    /* 角を丸める */
+    cursor: pointer;
+    /* カーソルをポインターに */
+    font-size: 16px;
+    /* フォントサイズを設定 */
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+    /* 色を指定（任意） */
+}
+
+button:hover {
+    background-color: #45a049;
+    /* ホバー時の背景色 */
+}
 
 
 
@@ -275,6 +294,56 @@
     .nav-links {
         flex: 1;
         text-align: right;
+    }
+
+    .hamburger {
+        display: block;
+        /* 960px以下で表示 */
+    }
+
+    #menu {
+        display: none;
+        /* メニューは非表示 */
+        flex-direction: column;
+        /* 縦に並べる */
+        position: absolute;
+        /* 絶対位置で表示 */
+        background: white;
+        /* 背景色を設定 */
+        width: 100%;
+        /* 幅を100%に */
+        top: 100%;
+        /* ハンバーガーの下に配置 */
+        left: 0;
+        z-index: 1000;
+        /* 他の要素の上に表示 */
+    }
+
+    #menu.show {
+        display: flex;
+        /* メニューが表示されるクラス */
+    }
+
+    #menu a {
+        text-decoration: none;
+        /* 下線を消す */
+        color: #333;
+        /* リンクの色を設定 */
+        padding: 10px;
+        /* フォントサイズを調整 */
+        display: block;
+        /* リンクをブロック要素にしてクリックしやすく */
+        font-weight: bold;
+    }
+
+    #menu li:hover a{
+        color: #dfbe2e;
+        transform: scale(1.1); /* スケールを使って少し拡大 */
+        transition: transform 0.2s; /* スケールの遷移を追加 */
+       }
+
+       #menu ul li:hover {
+        background-color: rgba(0, 0, 0, 0.1); /* ホバー時に背景色を追加 */
     }
 
     .nav-links li {
@@ -324,9 +393,9 @@
 
     .profile {
         display: flex;
-        flex-direction: column;  
+        flex-direction: column;
         margin-top: 50px;
-        align-items: center; 
+        align-items: center;
     }
 
     .contena {
@@ -384,7 +453,8 @@
         transition: transform 0.2s;
         /* ホバー効果用 */
         margin-top: 5px;
-         display: block; /* 余計なスペースをなくす */
+        display: block;
+        /* 余計なスペースをなくす */
     }
 
     .image-link:hover img {
@@ -439,8 +509,10 @@
 
     input::placeholder,
     textarea::placeholder {
-        font-size: small; /* サイズを指定 */
-        color: #999; /* 色を指定（任意） */
+        font-size: small;
+        /* サイズを指定 */
+        color: #999;
+        /* 色を指定（任意） */
     }
 
     textarea {
