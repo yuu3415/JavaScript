@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const headerHTML = `
         <nav>
             <div class="log-area">
@@ -24,20 +24,22 @@ document.addEventListener("DOMContentLoaded", function() {
 // EmailJSの初期化
 emailjs.init('KFwoSi2gn-enSRQkQ');
 
-window.onload = function() {
+window.onload = function () {
+    const contactForm = document.getElementById('contact-form');
     // フォーム要素の取得
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // デフォルトのフォーム送信を防ぐ
-        this.contact_number.value = Math.random() * 100000 | 0; // 5桁の乱数生成
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // デフォルトのフォーム送信を防ぐ
+            this.contact_number.value = Math.random() * 100000 | 0; // 5桁の乱数生成
 
         // フォームをEmailJSに送信
         emailjs.sendForm('service_g4g46we', 'template_gr2q7pk', this)
-            .then(function() {
+            .then(function () {
                 console.log('SUCCESS!'); // 成功時の処理
-            }, function(error) {
+            }, function (error) {
                 console.log('FAILED...', error); // エラー時の処理
             });
-    });
+    })};
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -47,21 +49,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.getElementById('close');
 
     links.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault(); // デフォルトの動作を無効
-            const img = e.target.tagName === 'IMG' ? e.target : e.target.querySelector('img');
-            if (img) {
-                overlayImage.src = img.src; // 画像をオーバーレイに表示
-                overlay.style.display = 'flex'; // オーバーレイを表示
-            }
+        if (links) {
+            link.addEventListener('click', (e) => {
+                e.preventDefault(); // デフォルトの動作を無効
+                const img = e.target.tagName === 'IMG' ? e.target : e.target.querySelector('img');
+                if (img) {
+                    overlayImage.src = img.src; // 画像をオーバーレイに表示
+                    overlay.style.display = 'flex'; // オーバーレイを表示
+                }
+            });
+        }
+    });
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            overlay.style.display = 'none'; // オーバーレイを非表示
+        })
+    };
+
+    if (overlay) {
+        overlay.addEventListener('click', () => {
+            overlay.style.display = 'none'; // オーバーレイを非表示
         });
-    });
-
-    closeBtn.addEventListener('click', () => {
-        overlay.style.display = 'none'; // オーバーレイを非表示
-    });
-
-    overlay.addEventListener('click', () => {
-        overlay.style.display = 'none'; // オーバーレイを非表示
-    });
+    }
 });

@@ -1,194 +1,484 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@media screen and (max-width:1200px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .main {
+        font-size: 1.2rem;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(to right, #f7f7f7, #f16cef);
+        overflow: auto;
+        position: relative;
+    }
+
+    nav {
+        display: flex;
+        width: 80%;
+        margin: 20px auto;
+        align-items: center;
+        font-weight: 550;
+        position: sticky;
+        z-index: 1;
+    }
+
+    .nav-links {
+        flex: 1;
+        text-align: right;
+    }
+
+    .nav-links li {
+        list-style: none;
+    }
+
+    .log-area {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        width: 50px;
+        height: 20%;
+        margin-right: 12px;
+        font-size: 14px;
+    }
+
+    .nav-links ul li {
+        display: inline-block;
+        padding: 0 2rem;
+    }
+
+    .nav-links ul a {
+        font-weight: 600;
+        color: #fff;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .nav-links ul a:hover {
+        color: #dfbe2e
+    }
+
+    .main {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 300;
+        font-style: italic;
+    }
+
+    .information {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .profile {
+        display: flex;
+        margin-top: 50px;
+    }
+
+    .contena {
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .contena img {
+        width: 600px;
+        height: auto;
+        margin-left: 100px;
+    }
+
+    .info {
+        width: auto;
+        height: auto;
+        margin: 20px;
+    }
+
+    .contact {
+        width: 100%;
+        height: auto;
+    }
+
+    .inner {
+        padding-left: 100px;
+        width: 800px;
+        height: auto;
+        margin: 0 auto;
+        font-size: 1.2rem;
+
+    }
+
+    label {
+        font-size: 1.2rem;
+        /* ラベルのフォントサイズを上げる */
+    }
+
+    input,
+    textarea {
+        font-size: 1.2rem;
+        /* 入力フィールドとテキストエリアのフォントサイズを上げる */
+        padding: 10px;
+        /* パディングを設定して、見た目を改善 */
+    }
+
+    button {
+        font-size: 1.2rem;
+        /* ボタンのフォントサイズを上げる */
+        padding: 10px 20px;
+        /* ボタンのパディングを調整 */
+    }
+
+
+
+    .sakuhin {
+        display: flex;
+        gap: 20px;
+        justify-content: left;
+        /* 中央揃え */
+        margin-left: 150px;
+    }
+
+
+    .image-link img {
+        width: 500px;
+        /* 必要に応じてサイズ調整 */
+        cursor: pointer;
+        transition: transform 0.2s;
+        /* ホバー効果用 */
+        margin-top: 20px;
+    }
+
+    .image-link:hover img {
+        transform: scale(1.05);
+        /* ホバー時に画像を少し拡大 */
+    }
+
+    .overlay {
+        display: none;
+        /* 初期状態は非表示 */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .overlay img {
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    #close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+
+
+    form {
+        display: flex;
+        /* フォーム内でもFlexboxを使用 */
+        flex-direction: column;
+        /* 縦方向に並べる */
+    }
+
+    label {
+        margin-bottom: 5px;
+        /* 下部のマージンを設定 */
+        font-weight: bold;
+        /* フォントを太字に */
+    }
+
+    textarea {
+        margin-bottom: 15px;
+        /* 下部のマージンを設定 */
+        padding: 10px;
+        /* 内側のパディングを設定 */
+        border: 1px solid #ccc;
+        /* ボーダーを追加 */
+        border-radius: 4px;
+        /* 角を丸める */
+        width: 100%;
+        /* 幅を100%に設定 */
+        box-sizing: border-box;
+        /* ボックスサイズを含める */
+    }
+
+    button {
+        padding: 10px;
+        /* 内側のパディングを設定 */
+        background-color: #4CAF50;
+        /* ボタンの背景色 */
+        color: white;
+        /* ボタンのテキスト色 */
+        border: none;
+        /* ボーダーをなしに */
+        border-radius: 4px;
+        /* 角を丸める */
+        cursor: pointer;
+        /* カーソルをポインターに */
+        font-size: 16px;
+        /* フォントサイズを設定 */
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: #999; /* 色を指定（任意） */
+    }
+
+    button:hover {
+        background-color: #45a049;
+        /* ホバー時の背景色 */
+    }
 }
 
-.main {
-    font-size: 1.2rem;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(to right, #f7f7f7, #f16cef);
-    overflow: auto;
-    position: relative;
-}
-
-nav {
-    display: flex;
-    width: 80%;
-    margin: 20px auto;
-    align-items: center;
-    font-weight: 550;
-    position: sticky;
-    z-index: 1;
-}
-
-.nav-links {
-    flex: 1;
-    text-align: right;
-}
-
-.nav-links li {
-    list-style: none;
-}
-
-.log-area {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    width: 50px;
-    height: 20%;
-    margin-right: 12px;
-    font-size: 14px;
-}
-
-.nav-links ul li {
-    display: inline-block;
-    padding: 0 2rem;
-}
-
-.nav-links ul a {
-    font-weight: 600;
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.nav-links ul a:hover {
-    color: #dfbe2e
-}
-
-.main {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-}
-
-.information {
-    width: 100%;
-    height: auto;
-    margin: 0 auto; 
-}
-
-.profile {
-    display: flex;
-    margin-top: 50px;
-}
-
-.contena {
-    display: flex;
-    width: 100%;
-    height: auto;
-    margin: 0 auto; 
-    align-items: center;
-}
-
-.contena img {
-    width: 600px;
-    height: auto;
-    margin-left: 100px;
-}
-
-.info {
-    width: auto;
-    height: auto;
-    margin: 20px;
-}
-
-.contact {
-    width: 100%;
-    height: auto;
-}
-
-.inner {
-    padding-left: 100px;
-    width: 800px;
-    height: auto;
-    margin: 0 auto;
-    
-}
 
 
+@media screen and (max-width:960px) {
 
-.sakuhin {
-    display: flex;
-    gap: 20px;
-    justify-content: left; /* 中央揃え */
-    margin-left: 150px;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
+    .main {
+        font-size: 1.0rem;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(to right, #f7f7f7, #f16cef);
+        overflow: auto;
+        position: relative;
+    }
 
-.image-link img {
-    width: 500px; /* 必要に応じてサイズ調整 */
-    cursor: pointer;
-    transition: transform 0.2s; /* ホバー効果用 */
-    margin-top: 20px;
-}
+    nav {
+        display: flex;
+        width: 80%;
+        margin: 20px auto;
+        align-items: center;
+        font-weight: 550;
+        position: sticky;
+        z-index: 1;
+    }
 
-.image-link:hover img {
-    transform: scale(1.05); /* ホバー時に画像を少し拡大 */
-}
+    .nav-links {
+        flex: 1;
+        text-align: right;
+    }
 
-.overlay {
-    display: none; /* 初期状態は非表示 */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
+    .nav-links li {
+        list-style: none;
+    }
 
-.overlay img {
-    max-width: 90%;
-    max-height: 90%;
-}
+    .log-area {
+        display: flex;
+        align-items: center;
+        font-size: small;
+    }
 
-#close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
-}
+    .logo {
+        width: 50px;
+        height: 20%;
+        margin-right: 12px;
+        font-size: 14px;
+    }
+
+    .nav-links ul li {
+        display: inline-block;
+        padding: 0 2rem;
+    }
+
+    .nav-links ul a {
+        font-weight: 600;
+        color: #fff;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .nav-links ul a:hover {
+        color: #dfbe2e
+    }
+
+    .main {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 300;
+        font-style: italic;
+    }
+
+    .information {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: column;  
+        margin-top: 50px;
+        align-items: center; 
+    }
+
+    .contena {
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .contena img {
+        width: 100%;
+        height: auto;
+        margin: 0%;
+    }
+
+    .info {
+        width: auto;
+        height: auto;
+        margin: 20px;
+    }
+
+    .contact {
+        width: 100%;
+        height: auto;
+    }
+
+    .inner {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding-left: 0%;
+        font-size: small;
+
+    }
 
 
 
-form {
-    display: flex; /* フォーム内でもFlexboxを使用 */
-    flex-direction: column; /* 縦方向に並べる */
-}
+    .sakuhin {
+        display: flex;
+        gap: 10px;
+        margin: 5px;
+    }
 
-label {
-    margin-bottom: 5px; /* 下部のマージンを設定 */
-    font-weight: bold; /* フォントを太字に */
-}
+    .onepicture {
+        width: 33%;
+        margin: 0%;
+    }
 
-textarea {
-    margin-bottom: 15px; /* 下部のマージンを設定 */
-    padding: 10px; /* 内側のパディングを設定 */
-    border: 1px solid #ccc; /* ボーダーを追加 */
-    border-radius: 4px; /* 角を丸める */
-    width: 100%; /* 幅を100%に設定 */
-    box-sizing: border-box; /* ボックスサイズを含める */
-}
 
-button {
-    padding: 10px; /* 内側のパディングを設定 */
-    background-color: #4CAF50; /* ボタンの背景色 */
-    color: white; /* ボタンのテキスト色 */
-    border: none; /* ボーダーをなしに */
-    border-radius: 4px; /* 角を丸める */
-    cursor: pointer; /* カーソルをポインターに */
-    font-size: 16px; /* フォントサイズを設定 */
-}
+    .image-link img {
+        width: 100%;
+        /* 必要に応じてサイズ調整 */
+        cursor: pointer;
+        transition: transform 0.2s;
+        /* ホバー効果用 */
+        margin-top: 5px;
+         display: block; /* 余計なスペースをなくす */
+    }
 
-button:hover {
-    background-color: #45a049; /* ホバー時の背景色 */
+    .image-link:hover img {
+        transform: scale(1.05);
+        /* ホバー時に画像を少し拡大 */
+    }
+
+    .overlay {
+        display: none;
+        /* 初期状態は非表示 */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .overlay img {
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    #close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+
+
+    form {
+        display: flex;
+        /* フォーム内でもFlexboxを使用 */
+        flex-direction: column;
+        /* 縦方向に並べる */
+    }
+
+    label {
+        margin-bottom: 5px;
+        /* 下部のマージンを設定 */
+        font-weight: bold;
+        /* フォントを太字に */
+        font-size: small;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        font-size: small; /* サイズを指定 */
+        color: #999; /* 色を指定（任意） */
+    }
+
+    textarea {
+        margin-bottom: 15px;
+        /* 下部のマージンを設定 */
+        padding: 10px;
+        /* 内側のパディングを設定 */
+        border: 1px solid #ccc;
+        /* ボーダーを追加 */
+        border-radius: 4px;
+        /* 角を丸める */
+        width: 100%;
+        /* 幅を100%に設定 */
+        box-sizing: border-box;
+        /* ボックスサイズを含める */
+    }
+
+    button {
+        padding: 10px;
+        /* 内側のパディングを設定 */
+        background-color: #4CAF50;
+        /* ボタンの背景色 */
+        color: white;
+        /* ボタンのテキスト色 */
+        border: none;
+        /* ボーダーをなしに */
+        border-radius: 4px;
+        /* 角を丸める */
+        cursor: pointer;
+        /* カーソルをポインターに */
+        font-size: 16px;
+        /* フォントサイズを設定 */
+    }
+
+    button:hover {
+        background-color: #45a049;
+        /* ホバー時の背景色 */
+    }
 }
