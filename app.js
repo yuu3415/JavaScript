@@ -22,7 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // EmailJSの初期化
-emailjs.init('KFwoSi2gn-enSRQkQ');
+if (emailjs) {
+    emailjs.init('KFwoSi2gn-enSRQkQ');
+}
 
 window.onload = function () {
     const contactForm = document.getElementById('contact-form');
@@ -32,14 +34,15 @@ window.onload = function () {
             event.preventDefault(); // デフォルトのフォーム送信を防ぐ
             this.contact_number.value = Math.random() * 100000 | 0; // 5桁の乱数生成
 
-        // フォームをEmailJSに送信
-        emailjs.sendForm('service_g4g46we', 'template_gr2q7pk', this)
-            .then(function () {
-                console.log('SUCCESS!'); // 成功時の処理
-            }, function (error) {
-                console.log('FAILED...', error); // エラー時の処理
-            });
-    })};
+            // フォームをEmailJSに送信
+            emailjs.sendForm('service_g4g46we', 'template_gr2q7pk', this)
+                .then(function () {
+                    console.log('SUCCESS!'); // 成功時の処理
+                }, function (error) {
+                    console.log('FAILED...', error); // エラー時の処理
+                });
+        })
+    };
 };
 
 document.addEventListener('DOMContentLoaded', () => {
