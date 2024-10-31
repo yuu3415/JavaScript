@@ -308,7 +308,9 @@ button:hover {
         /* 縦に並べる */
         position: absolute;
         /* 絶対位置で表示 */
-        background: white;
+        background: rgba(255, 255, 255, 0.9);
+        color: rgba(0, 0, 0, 0.8);
+        /* 濃いグレー */
         /* 背景色を設定 */
         width: 100%;
         /* 幅を100%に */
@@ -336,14 +338,17 @@ button:hover {
         font-weight: bold;
     }
 
-    #menu li:hover a{
+    #menu li:hover a {
         color: #dfbe2e;
-        transform: scale(1.1); /* スケールを使って少し拡大 */
-        transition: transform 0.2s; /* スケールの遷移を追加 */
-       }
+        transform: scale(1.1);
+        /* スケールを使って少し拡大 */
+        transition: transform 0.2s;
+        /* スケールの遷移を追加 */
+    }
 
-       #menu ul li:hover {
-        background-color: rgba(0, 0, 0, 0.1); /* ホバー時に背景色を追加 */
+    #menu ul li:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        /* ホバー時に背景色を追加 */
     }
 
     .nav-links li {
