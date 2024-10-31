@@ -155,9 +155,8 @@ button {
 .sakuhin {
     display: flex;
     gap: 20px;
-    justify-content: left;
+    justify-content: center;
     /* 中央揃え */
-    margin-left: 150px;
 }
 
 
