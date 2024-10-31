@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hamburger) {
         document.addEventListener('click', function (event) {
             if (!hamburger.contains(event.target) && !menu.contains(event.target)) {
-                menu.classList.remove('show'); // メニューを非表示
+                menu.classList.remove('show'); 
 
             }
         })
