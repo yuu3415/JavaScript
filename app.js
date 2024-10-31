@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="hamburger" id="hamburger">&#9776;</div> <!-- ハンバーガーアイコン -->
                 <ul id="menu">
                     <li><a href="index.html">Profile</a></li>
-                    <li><a href="https://www.instagram.com/marie_no_daibouken/profilecard/?igsh=aThlNmpqemYxanU3">Instagram</a></li>
+                    <li><a href="https://www.instagram.com/marie_no_daibouken/profilecard/?igsh=aThlNmpqemYxanU3" target="_blank" rel="noopener noreferrer">Instagram</a></li>
                     <li><a href="work.html">Work</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>

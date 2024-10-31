@@ -104,7 +104,15 @@ nav {
     align-items: center;
 }
 
-.contena img {
+.image {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.image img {
     width: 600px;
     height: auto;
     margin-left: 100px;
@@ -345,10 +353,6 @@ button:hover {
         /* スケールの遷移を追加 */
     }
 
-    #menu ul li:hover {
-        background-color: rgba(0, 0, 0, 0.1);
-        /* ホバー時に背景色を追加 */
-    }
 
     .nav-links li {
         list-style: none;
@@ -410,8 +414,17 @@ button:hover {
         align-items: center;
     }
 
-    .contena img {
+    .image {
+        display: flex;
         width: 100%;
+        height: auto;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image img {
+        width: 70%;
         height: auto;
         margin: 0%;
     }
