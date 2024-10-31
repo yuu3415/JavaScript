@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+@import url(https://fonts.googleapis.com/css?family=Lusitana:400,700);
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +11,6 @@
     font-size: 1.2rem;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to right, #f7f7f7, #f16cef);
     overflow: auto;
     position: relative;
 }
@@ -70,7 +72,7 @@ nav {
 
 .nav-links ul a {
     font-weight: 600;
-    color: #fff;
+    color: #0e0e0e;
     text-decoration: none;
     transition: 0.3s;
 }
@@ -130,33 +132,62 @@ nav {
 }
 
 .inner {
-    padding-left: 100px;
-    width: 800px;
+    width: 80%;
     height: auto;
     margin: 0 auto;
-    font-size: 1.2rem;
+    border-width: 0 0 2px 0;
+    border-color: #000;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    
 
 }
+
+.input-text {
+    height: 40px;
+    border: none; /* デフォルトのボーダーを無くす */
+    border-bottom: 2px solid #000; /* 下だけにボーダーを設定 */
+    box-shadow: none; /* ボックスシャドウを無くす */
+    font-family: Lusitana, serif;
+    font-size: small;
+    line-height: 26px;
+    font-weight: 400;
+    padding-top: 10px;
+    overflow-y: auto; /* スクロールを可能にする */
+    position: relative; /* プレースホルダーを下に配置するための基準に */
+    vertical-align: bottom; /* ボトムに寄せる */
+
+    &:focus {
+        outline: none; /* フォーカス時のアウトラインを消す */
+    }
+}
+
+
+.input-text::placeholder {
+    position: absolute;
+    bottom: 0px; /* プレースホルダーの位置を下に調整 */
+    color: #888; /* プレースホルダーの色 */
+    transition: all 0.2s ease-in-out; /* アニメーション効果 */
+}
+
+.input-text:focus::placeholder {
+    opacity: 0; /* フォーカス時にプレースホルダーを消す */
+}
+
 
 label {
     font-size: 1.2rem;
     /* ラベルのフォントサイズを上げる */
+    font-family: Lusitana, serif;
 }
 
-input,
-textarea {
-    font-size: 1.2rem;
-    /* 入力フィールドとテキストエリアのフォントサイズを上げる */
-    padding: 10px;
-    /* パディングを設定して、見た目を改善 */
+
+input {
+    font-family: Lusitana, serif;
 }
 
-button {
-    font-size: 1.2rem;
-    /* ボタンのフォントサイズを上げる */
-    padding: 10px 20px;
-    /* ボタンのパディングを調整 */
-}
+
 
 
 
@@ -226,25 +257,12 @@ label {
     /* フォントを太字に */
 }
 
-textarea {
-    margin-bottom: 15px;
-    /* 下部のマージンを設定 */
-    padding: 10px;
-    /* 内側のパディングを設定 */
-    border: 1px solid #ccc;
-    /* ボーダーを追加 */
-    border-radius: 4px;
-    /* 角を丸める */
-    width: 100%;
-    /* 幅を100%に設定 */
-    box-sizing: border-box;
-    /* ボックスサイズを含める */
-}
 
 button {
+    margin-top: 10px;
     padding: 10px;
     /* 内側のパディングを設定 */
-    background-color: #4CAF50;
+    background-color: #192673;
     /* ボタンの背景色 */
     color: white;
     /* ボタンのテキスト色 */
@@ -265,7 +283,7 @@ textarea::placeholder {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #181f49;
     /* ホバー時の背景色 */
 }
 
@@ -436,12 +454,13 @@ button:hover {
     }
 
     .contact {
+        display: flex;
         width: 100%;
         height: auto;
     }
 
     .inner {
-        width: 100%;
+        width: 80%;
         height: auto;
         margin: 0 auto;
         padding-left: 0%;

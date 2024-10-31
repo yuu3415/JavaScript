@@ -21,22 +21,20 @@
             <div class="contact">
                 <div class="inner">
                     <form id="contact-form"  method="post">
-                        <input type="hidden" name="contact_number" />
-                        <label for="last-name">姓</label>
-                        <input class="last" type="text" id="last-name" name="last-name"
-                            placeholder="例：田中">
+                        <input type="hidden" name="contact_number" >
+                        <label for="last-name">LastName</label>
+                        <input class="input-text" type="text" id="last-name" name="last-name" placeholder="Example：田中" >
                         <br>
-                        <label for="first-name">名</label>
-                        <input class="first" type="text" name="first-name" id="first-name" placeholder="例：太郎">
+                        <label for="first-name">FirstName</label>
+                        <input class="input-text" type="text" name="first-name" id="first-name" placeholder="Example：太郎">
                         <br>
-                        <label for="email">メールアドレス</label>
-                        <input class="mail" type="email" name="email" id="email" placeholder="例：tanaka@gmail.com">
+                        <label for="email">Mailadress</label>
+                        <input class="input-text" type="email" name="email" id="email" placeholder="Example：tanaka@gmail.com">
                         <br>
-                        <label for="inquiry">ご依頼内容等</label>
-                        <textarea class="text" name="inquiry" id="inquiry" placeholder="例：ウェディングの写真を依頼したい・記念日なのでこのくらいの予算感ならどのような撮影ができるか？等々" cols="30"
-                            rows="5"></textarea>
+                        <label for="inquiry">Request details etc.</label>
+                        <textarea class="input-text" name="inquiry" id="inquiry" placeholder="Example：撮影内容・シチュエーション・要望等" cols="30" rows="0"></textarea>
 
-                        <button>送信</button>
+                        <button>SUBMIT</button>
 
                     </form>
                 </div>
