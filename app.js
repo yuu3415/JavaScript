@@ -2,17 +2,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const headerHTML = `
         <nav>
             <div class="log-area">
-                <img src="./images/camera.png" alt="" class="logo">
                 <h2>marie photo exhibition</h2>
             </div>
             <div class="nav-links">
             <div class="hamburger" id="hamburger">&#9776;</div> <!-- ハンバーガーアイコン -->
                 <ul id="menu">
                     <li><a href="index.html">Profile</a></li>
-                    <li><a href="https://www.instagram.com/marie_no_daibouken/profilecard/?igsh=aThlNmpqemYxanU3" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="portrait.html">Portrait</a></li>
+                    <li><a href="makeup.html">makeup</a></li>
                     <li><a href="work.html">Work</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="https://www.instagram.com/marie_no_daibouken/profilecard/?igsh=aThlNmpqemYxanU3" target="_blank" rel="noopener noreferrer">
+                    <img src="./images/insta.png" alt="Instagram Logo" style="width: 24px; height: 24px;">
+                    </a></li>
                 </ul>
             </div>
         </nav>

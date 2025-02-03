@@ -195,17 +195,23 @@ input {
     display: flex;
     gap: 20px;
     justify-content: center;
-    /* 中央揃え */
+    margin: 0 20px; /* 左右に20pxのマージンを追加 */
+}
+
+.onepicture {
+    width: 33%; /* 1/3の幅を設定 */
+    padding: 10px; /* 各画像周りのパディングを設定（必要に応じて調整） */
+    box-sizing: border-box; /* パディングを含めた幅を計算 */
 }
 
 
+
 .image-link img {
-    width: 500px;
-    /* 必要に応じてサイズ調整 */
     cursor: pointer;
     transition: transform 0.2s;
     /* ホバー効果用 */
-    margin-top: 20px;
+    max-width: 100%; /* 画像が親要素の幅を超えないように */
+    height: auto; /* アスペクト比を保つ */
 }
 
 .image-link:hover img {
