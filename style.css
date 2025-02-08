@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: serif;
 }
 
 .main {
@@ -82,9 +83,7 @@ nav {
 }
 
 .main {
-    font-family: "Ubuntu", sans-serif;
     font-weight: 300;
-    font-style: italic;
 }
 
 .information {
@@ -149,7 +148,6 @@ nav {
     border: none; /* デフォルトのボーダーを無くす */
     border-bottom: 2px solid #000; /* 下だけにボーダーを設定 */
     box-shadow: none; /* ボックスシャドウを無くす */
-    font-family: Lusitana, serif;
     font-size: small;
     line-height: 26px;
     font-weight: 400;
@@ -179,13 +177,9 @@ nav {
 label {
     font-size: 1.2rem;
     /* ラベルのフォントサイズを上げる */
-    font-family: Lusitana, serif;
 }
 
 
-input {
-    font-family: Lusitana, serif;
-}
 
 
 
@@ -199,7 +193,7 @@ input {
 }
 
 .onepicture {
-    width: 33%; /* 1/3の幅を設定 */
+    width: 15%; /* 1/3の幅を設定 */
     padding: 10px; /* 各画像周りのパディングを設定（必要に応じて調整） */
     box-sizing: border-box; /* パディングを含めた幅を計算 */
 }
@@ -412,9 +406,8 @@ button:hover {
     }
 
     .main {
-        font-family: "Ubuntu", sans-serif;
+
         font-weight: 300;
-        font-style: italic;
     }
 
     .information {
