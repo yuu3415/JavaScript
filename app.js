@@ -33,7 +33,8 @@ window.onload = function () {
     // フォーム要素の取得
     if (contactForm) {
         contactForm.addEventListener('submit', function (event) {
-            event.preventDefault(); // デフォルトのフォーム送信を防ぐ
+            event.preventDefault();  // いったん送信をブロック
+            window.location.href = "kannsei.html";  // 明示的にページ遷移
             this.contact_number.value = Math.random() * 100000 | 0; // 5桁の乱数生成
 
             // フォームをEmailJSに送信
@@ -94,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hamburger) {
         document.addEventListener('click', function (event) {
             if (!hamburger.contains(event.target) && !menu.contains(event.target)) {
-                menu.classList.remove('show'); 
+                menu.classList.remove('show');
 
             }
         })

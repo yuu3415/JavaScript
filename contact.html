@@ -20,21 +20,21 @@
                 <h1 style="text-align: center;">Contact</h1>
                 <br>
                 <div class="inner">
-                    <form id="contact-form"  method="post">
+                    <form id="contact-form" action="kannsei.html" method="post">
                         <input type="hidden" name="contact_number" >
                         <label for="last-name">LastName</label>
-                        <input class="input-text" type="text" id="last-name" name="last-name" placeholder="Example：田中" >
+                        <input class="input-text" type="text" id="last-name" name="last-name" placeholder="Example：田中" required>
                         <br>
                         <label for="first-name">FirstName</label>
-                        <input class="input-text" type="text" name="first-name" id="first-name" placeholder="Example：太郎">
+                        <input class="input-text" type="text" name="first-name" id="first-name" placeholder="Example：太郎" required>
                         <br>
                         <label for="email">Mailadress</label>
-                        <input class="input-text" type="email" name="email" id="email" placeholder="Example：tanaka@gmail.com">
+                        <input class="input-text" type="email" name="email" id="email" placeholder="Example：tanaka@gmail.com" required>
                         <br>
                         <label for="inquiry">Request details etc.</label>
                         <textarea class="input-text" name="inquiry" id="inquiry" placeholder="Example：撮影内容・シチュエーション・要望等" cols="30" rows="0"></textarea>
 
-                        <button>SUBMIT</button>
+                        <button type="submit">SUBMIT</button>
 
                     </form>
                 </div>
