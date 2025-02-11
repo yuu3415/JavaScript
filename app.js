@@ -30,22 +30,24 @@ if (emailjs) {
 
 window.onload = function () {
     const contactForm = document.getElementById('contact-form');
-    // フォーム要素の取得
+
     if (contactForm) {
         contactForm.addEventListener('submit', function (event) {
-            event.preventDefault();  // いったん送信をブロック
-            window.location.href = "kannsei.html";  // 明示的にページ遷移
+            event.preventDefault();  // フォームのデフォルト送信をブロック
             this.contact_number.value = Math.random() * 100000 | 0; // 5桁の乱数生成
 
-            // フォームをEmailJSに送信
+            // EmailJS にフォームを送信
             emailjs.sendForm('service_g4g46we', 'template_gr2q7pk', this)
                 .then(function () {
                     console.log('SUCCESS!'); // 成功時の処理
-                }, function (error) {
+                    window.location.href = "kannsei.html";  // 送信成功後にページ遷移
+                })
+                .catch(function (error) {
                     console.log('FAILED...', error); // エラー時の処理
+                    alert("メール送信に失敗しました。再度お試しください。");
                 });
-        })
-    };
+        });
+    }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
